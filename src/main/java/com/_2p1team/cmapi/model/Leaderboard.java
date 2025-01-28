@@ -5,11 +5,11 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "Leaderboard")
 public class Leaderboard {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long competitionId;
-    @JoinColumn(name = "competitor_id")
     private Long competitorId;
+    @JoinColumn(name = "competition_id")
+    private Long competitionId;
     private int placement;
 
     public Leaderboard() {
@@ -44,4 +44,5 @@ public class Leaderboard {
     public void setPlacement(int placement) {
         this.placement = placement;
     }
+
 }

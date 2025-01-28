@@ -7,7 +7,9 @@ public record CompetitorSave(
     String club,
     LocalDate birthDate
 ) {
+
     public CompetitorSave() {
         this("", "", null);
     }
+
 }

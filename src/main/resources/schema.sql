@@ -21,9 +21,9 @@ CREATE TABLE competitor
 -- Create table leaderboard
 CREATE TABLE leaderboard
 (
-    competition_id int NOT NULL,
     competitor_id  int NOT NULL,
-    placement     int NOT NULL,
-    PRIMARY KEY (competition_id),
-    foreign key (competitor_id) references competitor (id) on delete cascade on update cascade
+    competition_id int NOT NULL,
+    placement      int NOT NULL,
+    PRIMARY KEY (competitor_id),
+    foreign key (competition_id) references competition (id) on delete cascade on update cascade
 );

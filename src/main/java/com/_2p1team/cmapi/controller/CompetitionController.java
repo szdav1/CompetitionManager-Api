@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("api/competition")
 public class CompetitionController {
+
     private final CompetitionService service;
 
     @Autowired
@@ -35,4 +36,10 @@ public class CompetitionController {
     public CompetitionRead createNewCompetition(@RequestBody CompetitionSave competitionSave) {
         return this.service.saveNewCompetition(competitionSave);
     }
+
+    @PutMapping("/update/{id}")
+    public CompetitionRead updateCompetition(@PathVariable final Long id, @RequestBody final CompetitionSave competitionSave) {
+        return this.service.updateCompetition(id, competitionSave);
+    }
+
 }

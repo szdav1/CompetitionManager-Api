@@ -1,12 +1,12 @@
 package com._2p1team.cmapi.dto;
 
-public record LeaderboardList(
+public record LeaderboardRead(
     Long competitorId,
     Long competitionId,
     int placement
 ) {
 
-    public LeaderboardList() {
+    public LeaderboardRead() {
         this(null, null, 0);
     }
 

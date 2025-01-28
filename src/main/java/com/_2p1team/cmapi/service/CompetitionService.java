@@ -14,6 +14,7 @@ import java.util.List;
 
 @Service
 public class CompetitionService {
+
     private final CompetitionRepository repository;
 
     @Autowired
@@ -37,4 +38,18 @@ public class CompetitionService {
 
         return CompetitionConverter.convertModelToRead(competition);
     }
+
+    public CompetitionRead updateCompetition(final Long id, final CompetitionSave competitionSave) {
+        Competition competition = repository.findById(id)
+            .orElseThrow(() -> new CompetitionNotFoundByIdException(String.format("Competition with '%d' id not found", id)));
+
+        competition.setName(competitionSave.name());
+        competition.setLocation(competitionSave.location());
+        competition.setDate(competitionSave.date());
+
+        this.repository.save(competition);
+
+        return CompetitionConverter.convertModelToRead(competition);
+    }
+
 }

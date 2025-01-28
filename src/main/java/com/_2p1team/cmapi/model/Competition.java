@@ -7,6 +7,7 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "Competition")
 public class Competition {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -61,4 +62,5 @@ public class Competition {
     public void setDate(LocalDate date) {
         this.date = date;
     }
+
 }

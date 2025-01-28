@@ -14,6 +14,7 @@ import java.util.List;
 
 @Service
 public class CompetitorService {
+
     private final CompetitorRepository repository;
 
     @Autowired
@@ -56,4 +57,5 @@ public class CompetitorService {
 
         this.repository.deleteById(id);
     }
+
 }

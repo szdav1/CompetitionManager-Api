@@ -7,4 +7,5 @@ public record CompetitionSave(
     String location,
     LocalDate date
 ) {
+
 }

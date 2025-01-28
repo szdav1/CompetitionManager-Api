@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "api/competitor")
 public class CompetitorController {
+
     private final CompetitorService service;
 
     @Autowired
@@ -46,4 +47,5 @@ public class CompetitorController {
     public void deleteCompetitor(@PathVariable final Long id) {
         this.service.deleteCompetitor(id);
     }
+
 }

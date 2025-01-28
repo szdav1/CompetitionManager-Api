@@ -6,4 +6,5 @@ public record CompetitionExceptionPayload(
     String message,
     HttpStatus status
 ) {
+
 }

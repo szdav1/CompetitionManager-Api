@@ -9,18 +9,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CompetitionConverter {
+
     public static List<CompetitionList> convertModelsToList(final List<Competition> competitions) {
         List<CompetitionList> list = new ArrayList<>();
-        competitions.forEach(competition -> list.add(new CompetitionList(competition.getName(), competition.getLocation(), competition.getDate())));
+        competitions.forEach(competition -> list.add(new CompetitionList(competition.getId(), competition.getName(), competition.getLocation(), competition.getDate())));
 
         return list;
     }
 
     public static CompetitionRead convertModelToRead(final Competition competition) {
-        return new CompetitionRead(competition.getName(), competition.getLocation(), competition.getDate());
+        return new CompetitionRead(competition.getId(), competition.getName(), competition.getLocation(), competition.getDate());
     }
 
     public static Competition convertSaveToModel(final CompetitionSave competitionSave) {
         return new Competition(competitionSave.name(), competitionSave.location(), competitionSave.date());
     }
+
 }
