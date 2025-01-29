@@ -5,6 +5,7 @@ import com._2p1team.cmapi.dto.LeaderboardRead;
 import com._2p1team.cmapi.dto.LeaderboardSave;
 import com._2p1team.cmapi.service.LeaderboardService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -31,8 +32,14 @@ public class LeaderboardController {
     }
 
     @PostMapping("/new")
+    @ResponseStatus(HttpStatus.CREATED)
     public LeaderboardRead createNewLeaderboard(@RequestBody final LeaderboardSave leaderboardSave) {
         return this.service.crateNewLeaderboard(leaderboardSave);
+    }
+
+    @PutMapping("/update/{id}")
+    public LeaderboardRead updateLeaderboard(@PathVariable final Long id, @RequestBody final LeaderboardSave leaderboardSave) {
+        return this.service.updateLeaderboard(id, leaderboardSave);
     }
 
 }

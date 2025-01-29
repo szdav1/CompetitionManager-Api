@@ -12,13 +12,13 @@ public class LeaderboardConverter {
 
     public static List<LeaderboardList> convertModelsToList(final List<Leaderboard> leaderboards) {
         List<LeaderboardList> list = new ArrayList<>();
-        leaderboards.forEach(leaderboard -> list.add(new LeaderboardList(leaderboard.getCompetitionId(), leaderboard.getCompetitorId(), leaderboard.getPlacement())));
+        leaderboards.forEach(leaderboard -> list.add(new LeaderboardList(leaderboard.getId(), leaderboard.getCompetitionId(), leaderboard.getCompetitorId(), leaderboard.getPlacement())));
 
         return list;
     }
 
     public static LeaderboardRead convertModelToRead(final Leaderboard leaderboard) {
-        return new LeaderboardRead(leaderboard.getCompetitionId(), leaderboard.getCompetitorId(), leaderboard.getPlacement());
+        return new LeaderboardRead(leaderboard.getId(), leaderboard.getCompetitionId(), leaderboard.getCompetitorId(), leaderboard.getPlacement());
     }
 
     public static Leaderboard convertSaveToModel(final LeaderboardSave leaderboardSave) {

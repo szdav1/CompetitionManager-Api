@@ -7,18 +7,34 @@ import jakarta.persistence.*;
 public class Leaderboard {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private Long competitorId;
-    @JoinColumn(name = "competition_id")
     private Long competitionId;
     private int placement;
 
     public Leaderboard() {
     }
 
-    public Leaderboard(Long competitionId, Long competitorId, int placement) {
+    public Leaderboard(Long competitorId, Long competitionId, int placement) {
+        this.competitorId = competitorId;
+        this.competitionId = competitionId;
+        this.placement = placement;
+    }
+
+    public Leaderboard(Long id, Long competitionId, Long competitorId, int placement) {
+        this.id = id;
         this.competitionId = competitionId;
         this.competitorId = competitorId;
         this.placement = placement;
+    }
+
+    public Long getId() {
+        return this.id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getCompetitionId() {

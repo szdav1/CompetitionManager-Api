@@ -42,4 +42,17 @@ public class LeaderboardService {
         return LeaderboardConverter.convertModelToRead(leaderboard);
     }
 
+    public LeaderboardRead updateLeaderboard(final Long id, final LeaderboardSave leaderboardSave) {
+        Leaderboard leaderboard = this.repository.findById(id)
+            .orElseThrow(() -> new LeaderboardNotFoundByIdException(String.format("Leaderboard with '%d' id not found", id)));
+
+        leaderboard.setCompetitionId(leaderboardSave.competitionId());
+        leaderboard.setCompetitorId(leaderboardSave.competitorId());
+        leaderboard.setPlacement(leaderboardSave.placement());
+
+        this.repository.save(leaderboard);
+
+        return LeaderboardConverter.convertModelToRead(leaderboard);
+    }
+
 }
