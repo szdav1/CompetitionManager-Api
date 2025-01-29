@@ -42,7 +42,7 @@ public class CompetitorController {
         return this.service.updateCompetitor(id, competitorSave);
     }
 
-    @DeleteMapping("/del/{id}")
+    @DeleteMapping("/delete/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteCompetitor(@PathVariable final Long id) {
         this.service.deleteCompetitor(id);
