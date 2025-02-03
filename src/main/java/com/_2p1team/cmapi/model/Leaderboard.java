@@ -3,11 +3,11 @@ package com._2p1team.cmapi.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Leaderboard")
+@Table(name="Leaderboard")
 public class Leaderboard {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private Long competitorId;
     private Long competitionId;

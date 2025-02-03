@@ -4,18 +4,12 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
-/*
- * Read - Egy lekerdezes
- *
- * List - Osszes/Tobb lekerdezes
- * Save - Mentes
- * */
 @Entity
-@Table(name = "Competitor")
+@Table(name="Competitor")
 public class Competitor {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String club;
