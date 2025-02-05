@@ -63,4 +63,14 @@ public class Competition {
         this.date = date;
     }
 
+    @Override
+    public String toString() {
+        return "Competition{"+
+            "id="+id+
+            ", name='"+name+'\''+
+            ", location='"+location+'\''+
+            ", date="+date+
+            '}';
+    }
+
 }

@@ -22,10 +22,10 @@ CREATE TABLE competitor
 CREATE TABLE leaderboard
 (
     id             int NOT NULL AUTO_INCREMENT,
-    competitor_id  int NOT NULL,
     competition_id int NOT NULL,
+    competitor_id  int NOT NULL,
     placement      int NOT NULL,
     PRIMARY KEY (id),
-    foreign key (competitor_id) references competitor (id) on delete cascade on update cascade,
-    foreign key (competition_id) references competition (id) on delete cascade on update cascade
+    foreign key (competition_id) references competition (id) on delete cascade on update cascade,
+    foreign key (competitor_id) references competitor (id) on delete cascade on update cascade
 );

@@ -9,17 +9,11 @@ public class Leaderboard {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    private Long competitorId;
     private Long competitionId;
+    private Long competitorId;
     private int placement;
 
     public Leaderboard() {
-    }
-
-    public Leaderboard(Long competitorId, Long competitionId, int placement) {
-        this.competitorId = competitorId;
-        this.competitionId = competitionId;
-        this.placement = placement;
     }
 
     public Leaderboard(Long id, Long competitionId, Long competitorId, int placement) {
@@ -29,8 +23,14 @@ public class Leaderboard {
         this.placement = placement;
     }
 
+    public Leaderboard(Long competitionId, Long competitorId, int placement) {
+        this.competitionId = competitionId;
+        this.competitorId = competitorId;
+        this.placement = placement;
+    }
+
     public Long getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(Long id) {
@@ -38,7 +38,7 @@ public class Leaderboard {
     }
 
     public Long getCompetitionId() {
-        return this.competitionId;
+        return competitionId;
     }
 
     public void setCompetitionId(Long competitionId) {
@@ -46,7 +46,7 @@ public class Leaderboard {
     }
 
     public Long getCompetitorId() {
-        return this.competitorId;
+        return competitorId;
     }
 
     public void setCompetitorId(Long competitorId) {
@@ -54,11 +54,21 @@ public class Leaderboard {
     }
 
     public int getPlacement() {
-        return this.placement;
+        return placement;
     }
 
     public void setPlacement(int placement) {
         this.placement = placement;
+    }
+
+    @Override
+    public String toString() {
+        return "Leaderboard{"+
+            "id="+id+
+            ", competitorId="+competitorId+
+            ", competitionId="+competitionId+
+            ", placement="+placement+
+            '}';
     }
 
 }

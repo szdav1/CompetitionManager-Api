@@ -1,8 +1,8 @@
 package com._2p1team.cmapi.dto;
 
 public record LeaderboardSave(
-    Long competitorId,
     Long competitionId,
+    Long competitorId,
     int placement
 ) {
 

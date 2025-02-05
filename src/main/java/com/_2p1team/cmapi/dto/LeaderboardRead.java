@@ -2,8 +2,8 @@ package com._2p1team.cmapi.dto;
 
 public record LeaderboardRead(
     Long id,
-    Long competitorId,
     Long competitionId,
+    Long competitorId,
     int placement
 ) {
 

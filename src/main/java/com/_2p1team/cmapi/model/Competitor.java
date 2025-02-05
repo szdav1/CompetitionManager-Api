@@ -63,4 +63,14 @@ public class Competitor {
         this.birthDate = birthDate;
     }
 
+    @Override
+    public String toString() {
+        return "Competitor{"+
+            "id="+id+
+            ", name='"+name+'\''+
+            ", club='"+club+'\''+
+            ", birthDate="+birthDate+
+            '}';
+    }
+
 }
