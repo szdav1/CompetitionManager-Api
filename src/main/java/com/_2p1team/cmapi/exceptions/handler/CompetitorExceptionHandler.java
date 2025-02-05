@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class CompetitorExceptionHandler {
 
-    @ExceptionHandler(value = {CompetitorNotFoundByIdException.class})
+    @ExceptionHandler(value={CompetitorNotFoundByIdException.class})
     public ResponseEntity<Object> handleCompetitorNotFoundByIdException(final CompetitorNotFoundByIdException exception) {
         return new ResponseEntity<>(new CompetitorExceptionPayload(exception.getMessage(), HttpStatus.NOT_FOUND), HttpStatus.NOT_FOUND);
     }

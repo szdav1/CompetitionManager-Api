@@ -11,10 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 /*
-* TODO: Fix Leaderboard table structure
-*  as it is inappropriate
-* */
+ * TODO: Fix Leaderboard table structure
+ *  as it is inappropriate
+ * */
 @Service
 public class LeaderboardService {
 
