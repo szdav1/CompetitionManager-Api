@@ -26,7 +26,7 @@ public class CompetitionController {
 
     @GetMapping("/")
     @Operation(summary="Get all the competitions from the database")
-    // TODO
+    @ApiResponse(responseCode="200", description="{A list of the competitions from the database}")
     public List<CompetitionList> listCompetitions() {
         return this.service.findAll();
     }

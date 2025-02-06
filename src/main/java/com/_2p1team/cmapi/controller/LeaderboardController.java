@@ -26,23 +26,31 @@ public class LeaderboardController {
 
     @GetMapping("/")
     @Operation(summary="Get all the leaderboard elements from the database")
-    @ApiResponse(responseCode="200", description="{A list of the leaderboard elements in the database}")
+    @ApiResponse(responseCode="200", description="{A list of the leaderboard elements from the database}")
     public List<LeaderboardList> listLeaderboard() {
         return this.service.findAll();
     }
 
     @GetMapping("/{id}")
+    @Operation(summary="Get the leaderboard element with the specified id")
+    @ApiResponse(responseCode="404", description="Leaderboard element with specified id not found")
+    @ApiResponse(responseCode="200", description="The leaderboard element with the specified id")
     public LeaderboardRead findLeaderboardById(@PathVariable final Long id) {
         return this.service.findLeaderboardById(id);
     }
 
     @PostMapping("/new")
     @ResponseStatus(HttpStatus.CREATED)
+    @Operation(summary="Create a new leaderboard element")
+    @ApiResponse(responseCode="200", description = "{The created leaderboard object}")
     public LeaderboardRead createNewLeaderboard(@RequestBody final LeaderboardSave leaderboardSave) {
         return this.service.crateNewLeaderboard(leaderboardSave);
     }
 
     @PutMapping("/update/{id}")
+    @Operation(summary="Update leaderboard with the specified id")
+    @ApiResponse(responseCode="404", description="Leaderboard element with specified id not found")
+    @ApiResponse(responseCode="200", description="{The updated leaderboard element object}")
     public LeaderboardRead updateLeaderboard(@PathVariable final Long id, @RequestBody final LeaderboardSave leaderboardSave) {
         return this.service.updateLeaderboard(id, leaderboardSave);
     }
