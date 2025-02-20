@@ -29,6 +29,7 @@ public class CompetitionPlacementService {
     }
 
     // WARNING: DO NOT CHANGE AT ANY TIME
+    // TODO: Fix this method as it returns the values twice
     public List<CompetitionPlacement> getPlacementsByCompetitor(final Long competitorId) {
         List<CompetitionPlacement> placements = new ArrayList<>();
 
