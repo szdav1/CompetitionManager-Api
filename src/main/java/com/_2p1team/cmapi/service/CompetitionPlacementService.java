@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CompetitionPlacementService {
@@ -26,6 +27,15 @@ public class CompetitionPlacementService {
         this.competitorRepository = competitorRepository;
         this.competitionRepository = competitionRepository;
         this.leaderboardRepository = leaderboardRepository;
+    }
+
+    private Optional<Competition> getAppropriateCompetitionData(final long leaderboardId, final List<Competition> participatedCompetitions) {
+        for (Competition participatedCompetition : participatedCompetitions) {
+            if (leaderboardId == participatedCompetition.getId())
+                return Optional.of(participatedCompetition);
+        }
+
+        return Optional.empty();
     }
 
     // WARNING: DO NOT CHANGE AT ANY TIME
@@ -52,10 +62,17 @@ public class CompetitionPlacementService {
             }
         }
 
+        System.out.println(participatedCompetitions);
+        System.out.println(participatedLeaderboards);
+
         for (Leaderboard participatedLeaderboard : participatedLeaderboards) {
-            for (Competition participatedCompetition : participatedCompetitions) {
-                placements.add(new CompetitionPlacement(competitor.getName(), participatedCompetition.getName(), participatedCompetition.getLocation(), participatedCompetition.getDate(), participatedLeaderboard.getPlacement()));
-            }
+            Optional<Competition> participatedCompetitionOptional = this.getAppropriateCompetitionData(participatedLeaderboard.getCompetitionId(), participatedCompetitions);
+
+            if (participatedCompetitionOptional.isEmpty())
+                continue;
+
+            Competition participatedCompetition = participatedCompetitionOptional.get();
+            placements.add(new CompetitionPlacement(competitor.getName(), participatedCompetition.getName(), participatedCompetition.getLocation(), participatedCompetition.getDate(), participatedLeaderboard.getPlacement()));
         }
 
         return placements;

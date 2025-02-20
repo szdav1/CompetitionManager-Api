@@ -35,7 +35,16 @@ values (1, 1, 3);
 
 -- Query to select the name of the fencer, the competition name and the placement of the fencer on the competition
 /*
-select competitor.name, competition.name, leaderboard.placement from leaderboard
-inner join competitor on competitor.id=leaderboard.competitorId
-inner join competition on competition.id=leaderboard.competitionId;
+select competitor.name, competition.name, competition.location, competition.date, leaderboard.placement from leaderboard
+inner join competitor on competitor.id=leaderboard.competitor_id
+inner join competition on competition.id=leaderboard.competition_id;
+*/
+
+/*
+
+NAME  	        NAME  	         LOCATION  	    DATE  	    PLACEMENT
+Szanto David	Elso verseny	 Nyirszikszi	2025-01-01	    1
+Szurke Levente	Masodik verseny	 Pince	        2025-12-01	    2
+Szabo David	    Harmadik verseny Nyiregyhaza	2022-02-01	    3
+Szabo David	    Elso verseny	 Nyirszikszi	2025-01-01	    3
 */
