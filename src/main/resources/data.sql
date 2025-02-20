@@ -33,6 +33,18 @@ values (3, 1, 3);
 insert into leaderboard (competition_id, competitor_id, placement)
 values (1, 1, 3);
 
+insert into leaderboard (competition_id, competitor_id, placement)
+values (2, 3, 6);
+
+insert into leaderboard (competition_id, competitor_id, placement)
+values (3, 2, 12);
+
+insert into leaderboard (competition_id, competitor_id, placement)
+values (2, 1, 9);
+
+insert into leaderboard (competition_id, competitor_id, placement)
+values (1, 3, 21);
+
 -- Query to select the name of the fencer, the competition name and the placement of the fencer on the competition
 /*
 select competitor.name, competition.name, competition.location, competition.date, leaderboard.placement from leaderboard
