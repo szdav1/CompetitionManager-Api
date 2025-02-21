@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="CompetitionManagerApi" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="Api" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com._2p1team.cmapi.CompetitionManagerApi" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -38,8 +38,6 @@ public class CompetitionPlacementService {
         return Optional.empty();
     }
 
-    // WARNING: DO NOT CHANGE AT ANY TIME
-    // TODO: Fix this method as it returns the values twice
     public List<CompetitionPlacement> getPlacementsByCompetitor(final Long competitorId) {
         List<CompetitionPlacement> placements = new ArrayList<>();
 
@@ -61,9 +59,6 @@ public class CompetitionPlacementService {
                     participatedCompetitions.add(competition);
             }
         }
-
-        System.out.println(participatedCompetitions);
-        System.out.println(participatedLeaderboards);
 
         for (Leaderboard participatedLeaderboard : participatedLeaderboards) {
             Optional<Competition> participatedCompetitionOptional = this.getAppropriateCompetitionData(participatedLeaderboard.getCompetitionId(), participatedCompetitions);
