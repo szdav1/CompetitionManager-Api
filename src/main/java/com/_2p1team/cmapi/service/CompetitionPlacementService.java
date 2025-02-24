@@ -67,7 +67,7 @@ public class CompetitionPlacementService {
                 continue;
 
             Competition participatedCompetition = participatedCompetitionOptional.get();
-            placements.add(new CompetitionPlacement(competitor.getName(), participatedCompetition.getName(), participatedCompetition.getLocation(), participatedCompetition.getDate(), participatedLeaderboard.getPlacement()));
+            placements.add(new CompetitionPlacement(competitor.getName(), competitor.getClub(), participatedCompetition.getName(), participatedCompetition.getLocation(), participatedCompetition.getDate(), participatedLeaderboard.getPlacement()));
         }
 
         return placements;

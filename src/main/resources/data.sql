@@ -11,13 +11,22 @@ values ('Harmadik verseny', 'Nyiregyhaza', '2022-02-01');
 
 -- COMPETITOR
 insert into competitor (name, club, birth_date)
-values ('Szabo David', 'Nyirszikszi CLUB', '2005-01-01');
+values ('Szabo David', 'Nyirszikszi CLUB', '2005-01-01'); -- 1
 
 insert into competitor (name, club, birth_date)
-values ('Szurke Levente', 'Pince CLUB', '2005-12-01');
+values ('Szurke Levente', 'Pince CLUB', '2005-12-01'); -- 2
 
 insert into competitor (name, club, birth_date)
-values ('Szanto David', 'Minek Vagy Itt CLUB', '2005-02-01');
+values ('Szanto David', 'Minek Vagy Itt CLUB', '2005-02-01'); -- 3
+
+insert into competitor (name, club, birth_date)
+values ('Lakatos Turret', 'Dzsipo KLUBB', '2012-01-19'); -- 4
+
+insert into competitor (name, club, birth_date)
+values ('Rezmives Lopottbicikli', 'Elloptak a Biciklim KLUBB', '1987-12-23'); -- 5
+
+insert into competitor (name, club, birth_date)
+values ('Necigizz Velemella', 'TouchMarbi', '2012-06-11'); -- 6
 
 
 -- LEADERBOARD
@@ -31,19 +40,13 @@ insert into leaderboard (competition_id, competitor_id, placement)
 values (3, 1, 3);
 
 insert into leaderboard (competition_id, competitor_id, placement)
-values (1, 1, 3);
+values (3, 4, 23);
 
 insert into leaderboard (competition_id, competitor_id, placement)
-values (2, 3, 6);
+values (2, 5, 19);
 
 insert into leaderboard (competition_id, competitor_id, placement)
-values (3, 2, 12);
-
-insert into leaderboard (competition_id, competitor_id, placement)
-values (2, 1, 9);
-
-insert into leaderboard (competition_id, competitor_id, placement)
-values (1, 3, 21);
+values (1, 6, 105);
 
 -- Query to select the name of the fencer, the competition name and the placement of the fencer on the competition
 /*
