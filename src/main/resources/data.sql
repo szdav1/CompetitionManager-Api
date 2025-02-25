@@ -20,13 +20,37 @@ insert into competitor (name, club, birth_date)
 values ('Szanto David', 'Minek Vagy Itt CLUB', '2005-02-01'); -- 3
 
 insert into competitor (name, club, birth_date)
-values ('Lakatos Turret', 'Dzsipo KLUBB', '2012-01-19'); -- 4
+values ('Lakatos Turret', 'Nyirszikszi CLUB', '2012-01-19'); -- 4
 
 insert into competitor (name, club, birth_date)
 values ('Rezmives Lopottbicikli', 'Elloptak a Biciklim KLUBB', '1987-12-23'); -- 5
 
 insert into competitor (name, club, birth_date)
 values ('Necigizz Velemella', 'TouchMarbi', '2012-06-11'); -- 6
+
+insert into competitor (name, club, birth_date)
+values ('Beteri Gabor', 'TouchMarbi', '2006-03-23'); -- 7
+
+insert into competitor (name, club, birth_date)
+values ('Kerekes Dominik', 'Kristaly', '2004-02-01'); -- 8
+
+insert into competitor (name, club, birth_date)
+values ('Hansaghy Bence', 'Kristaly', '2025-01-06'); -- 9
+
+insert into competitor (name, club, birth_date)
+values ('Kis Ferenc', 'MAV', '1978-09-11'); -- 10
+
+insert into competitor (name, club, birth_date)
+values ('Nagy Tamas', 'Nyirszikszi CLUB', '2000-05-15'); -- 11
+
+insert into competitor (name, club, birth_date)
+values ('Kolompar Megatron', 'Minek Vagy Itt CLUB', '1999-01-01'); -- 12
+
+insert into competitor (name, club, birth_date)
+values ('Laszo Devera Almos', 'Pince CLUB', '2006-02-24'); -- 13
+
+insert into competitor (name, club, birth_date)
+values ('Vap Solo', 'TouchMarbi', '2014-02-11'); -- 14
 
 
 -- LEADERBOARD
