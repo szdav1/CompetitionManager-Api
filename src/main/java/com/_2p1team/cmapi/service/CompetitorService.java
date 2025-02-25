@@ -34,6 +34,9 @@ public class CompetitorService {
     }
 
     public CompetitorRead saveNewCompetitor(final CompetitorSave competitorSave) {
+        if (this.findAll().size() >= Competitor.DATABASE_CAPACITY)
+            return null;
+
         Competitor competitor = this.repository.save(CompetitorConverter.convertSaveToModel(competitorSave));
         return CompetitorConverter.convertModelToRead(competitor);
     }

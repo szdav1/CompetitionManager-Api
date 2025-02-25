@@ -4,6 +4,7 @@
     <option name="SPRING_BOOT_MAIN_CLASS" value="com._2p1team.cmapi.CompetitionManagerApi" />
     <method v="2">
       <option name="Make" enabled="true" />
+      <option name="LaunchBrowser.Before.Run" url="http://localhost:8080/swagger-ui/index.html" />
     </method>
   </configuration>
 </component>

@@ -8,6 +8,8 @@ import java.time.LocalDate;
 @Table(name="Competitor")
 public class Competitor {
 
+    public static final int DATABASE_CAPACITY = 128;
+
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
