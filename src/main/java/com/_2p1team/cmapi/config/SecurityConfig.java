@@ -15,7 +15,7 @@ public class SecurityConfig {
     SecurityFilterChain secureRequests(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity.authorizeHttpRequests(httpRequests -> {
                 httpRequests.requestMatchers("/swagger-ui/**", "/swagger-resources/**", "/v3/api-docs/**").permitAll();
-                httpRequests.anyRequest().authenticated();
+                httpRequests.anyRequest().permitAll();
             })
             .formLogin(Customizer.withDefaults())
             .build();
