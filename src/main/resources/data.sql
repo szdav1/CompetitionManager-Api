@@ -54,7 +54,7 @@ values ('Vap Solo', 'TouchMarbi', '2014-02-11'); -- 14
 
 
 -- LEADERBOARD
-insert into leaderboard (competition_id, competitor_id, placement)
+/*insert into leaderboard (competition_id, competitor_id, placement)
 values (1, 3, 1);
 
 insert into leaderboard (competition_id, competitor_id, placement)
@@ -70,7 +70,7 @@ insert into leaderboard (competition_id, competitor_id, placement)
 values (2, 5, 19);
 
 insert into leaderboard (competition_id, competitor_id, placement)
-values (1, 6, 105);
+values (1, 6, 105);*/
 
 -- Query to select the name of the fencer, the competition name and the placement of the fencer on the competition
 /*
