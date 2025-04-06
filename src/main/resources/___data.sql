@@ -431,7 +431,9 @@
 -- -- values (2, 5, 19);
 --
 --
---
+-- select competition.name, competition.date, competitor.name from leaderboard inner join
+-- competition on competition.id=leaderboard.competition_id inner join
+-- competitor on competitor.id=leaderboard.competitor_id;
 --
 --
 --
