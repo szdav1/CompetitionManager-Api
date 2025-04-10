@@ -10,7 +10,7 @@
     </parent>
     <groupId>com._2p1team.cmapi</groupId>
     <artifactId>Api</artifactId>
-    <version>1.0-LTS-Stable-Release</version>
+    <version>1.5-LTS-Stable-Release</version>
     <name>Api</name>
     <description>Api</description>
     <url/>

@@ -29,3 +29,11 @@
 --     foreign key (competition_id) references competition (id) on delete cascade on update cascade,
 --     foreign key (competitor_id) references competitor (id) on delete cascade on update cascade
 -- );
+--
+-- CREATE TABLE admins
+-- (
+--     id BIGINT NOT NULL AUTO_INCREMENT,
+--     username varchar(255) NOT NULL,
+--     password varchar(255) NOT NULL
+--     PRIMARY KEY (id)
+-- );
