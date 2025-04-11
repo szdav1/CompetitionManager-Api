@@ -12,13 +12,13 @@ public class AdminsConverter {
     public static List<AdminsList> convertModelsToList(List<Admins> admins) {
         List<AdminsList> adminsLists = new ArrayList<>();
 
-        admins.forEach(admin -> adminsLists.add(new AdminsList(admin.getId(), admin.getUsername(), admin.getPassword())));
+        admins.forEach(admin -> adminsLists.add(new AdminsList(admin.getId(), admin.getEmail(), admin.getPassword())));
 
         return adminsLists;
     }
 
     public static Admins convertSaveToModel(AdminsSave adminsSave) {
-        return new Admins(adminsSave.username(), adminsSave.password());
+        return new Admins(adminsSave.email(), adminsSave.password());
     }
 
 }

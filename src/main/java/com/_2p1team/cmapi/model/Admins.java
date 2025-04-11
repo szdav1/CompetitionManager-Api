@@ -9,20 +9,20 @@ public class Admins {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    private String username;
+    private String email;
     private String password;
 
     public Admins() {
     }
 
-    public Admins(Long id, String username, String password) {
+    public Admins(Long id, String email, String password) {
         this.id = id;
-        this.username = username;
+        this.email = email;
         this.password = password;
     }
 
-    public Admins(String username, String password) {
-        this.username = username;
+    public Admins(String email, String password) {
+        this.email = email;
         this.password = password;
     }
 
@@ -34,12 +34,12 @@ public class Admins {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setEmail(String username) {
+        this.email = username;
     }
 
     public String getPassword() {
@@ -54,7 +54,7 @@ public class Admins {
     public String toString() {
         return "Admins{"+
             "id="+id+
-            ", username='"+username+'\''+
+            ", email='"+email+'\''+
             ", password='"+password+'\''+
             '}';
     }

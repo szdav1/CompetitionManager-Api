@@ -2,7 +2,7 @@ package com._2p1team.cmapi.dto;
 
 public record AdminsList(
     Long id,
-    String username,
+    String email,
     String password
 ) {
 
