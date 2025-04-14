@@ -30,6 +30,8 @@ public class SecurityConfiguration {
         return security.csrf(AbstractHttpConfigurer::disable)
             .authorizeHttpRequests(authorize -> authorize.requestMatchers("api/*/")
                 .permitAll()
+                .requestMatchers("api/placements/*")
+                .permitAll()
                 .anyRequest()
                 .authenticated()
             )
