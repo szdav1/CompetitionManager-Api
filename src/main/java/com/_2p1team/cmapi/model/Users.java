@@ -3,26 +3,23 @@ package com._2p1team.cmapi.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="Admins")
-public class Admins {
+@Table(name="Users")
+public class Users {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    private String email;
+    private String role;
+    private String username;
     private String password;
 
-    public Admins() {
+    public Users() {
     }
 
-    public Admins(Long id, String email, String password) {
+    public Users(Long id, String role, String username, String password) {
         this.id = id;
-        this.email = email;
-        this.password = password;
-    }
-
-    public Admins(String email, String password) {
-        this.email = email;
+        this.role = role;
+        this.username = username;
         this.password = password;
     }
 
@@ -34,12 +31,20 @@ public class Admins {
         this.id = id;
     }
 
-    public String getEmail() {
-        return email;
+    public String getRole() {
+        return role;
     }
 
-    public void setEmail(String username) {
-        this.email = username;
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -52,9 +57,10 @@ public class Admins {
 
     @Override
     public String toString() {
-        return "Admins{"+
+        return "Users{"+
             "id="+id+
-            ", email='"+email+'\''+
+            ", role='"+role+'\''+
+            ", username='"+username+'\''+
             ", password='"+password+'\''+
             '}';
     }
