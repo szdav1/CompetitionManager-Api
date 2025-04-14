@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @Tag(name="Connection Test")
 @RequestMapping("/api/test")
-@CrossOrigin(origins="http://localhost:3001") //ToDo: Delete after deployment
 public class ConnectionTestController {
 
     @GetMapping("/")

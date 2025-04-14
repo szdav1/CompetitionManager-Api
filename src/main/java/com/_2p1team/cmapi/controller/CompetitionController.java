@@ -16,7 +16,6 @@ import java.util.List;
 @RestController
 @Tag(name="Competition")
 @RequestMapping("api/competition")
-@CrossOrigin(origins="http://localhost:3001") //ToDo: Delete after deployment
 public class CompetitionController {
 
     private final CompetitionService service;

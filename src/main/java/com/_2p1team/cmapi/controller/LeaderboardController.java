@@ -16,7 +16,6 @@ import java.util.List;
 @RestController
 @Tag(name="Leaderboard")
 @RequestMapping("/api/leaderboard")
-@CrossOrigin(origins="http://localhost:3001") //ToDo: Delete after deployment
 public class LeaderboardController {
 
     private final LeaderboardService service;
